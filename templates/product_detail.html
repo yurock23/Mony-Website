@@ -1,0 +1,60 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid padding">
+    <div class="row padding">
+        <div class="col-md-12 col-lg-4">
+            <img class="product-img" src="{{ product.item_image.url }}" alt="">
+        </div>
+
+        <div class="col-md-12 col-lg-8">
+            <h1>{{product.item_name}}</h1>
+            <h3>${{product.item_price}}</h3>
+            <p>{{product.item_description}}</p>
+
+            <a href="{{ product.get_add_to_cart_url }}" class="btn btn-primary btn-md my-0 p" onclick="added()">
+                Add to cart
+                <i class="fas fa-cart-plus"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="review-sec">
+    <h2>Reviews</h2>
+    {% if user.is_authenticated %}
+        <h2>Leave a review for this product</h2>
+        <h4>- {{user.username}}</h4>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-success ml-2" type="submit">Save</button>
+        </form>
+    {% else %}
+        <h4>Please log in to leave a review: <a href="{% url 'login' %}">Log In</a> or <a href="{% url 'signup' %}">Create Account</a></h4>
+    {% endif %}
+
+</div>
+
+<hr>
+
+<div class="review-disp">
+    {% for review in reviews %}
+        <p>
+            {{review.created_on.date }}<b>
+        </p>
+        <p>{{ review.body }}</p>
+        - {{ review.customer }}</b>
+        <hr>
+    {% endfor %}
+</div>
+<script>
+    function added(){
+        alert("Your item has been added!")
+    }
+
+</script>
+
+{% endblock %}

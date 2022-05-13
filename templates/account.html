@@ -1,0 +1,18 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block content %}
+<p style = 'text-align: center;'><b style ="font-size: 50px;">Hello, {{user.first_name}}</b></p>
+
+<p style = "margin-left: 5%;">
+    <b style = 'font-size: 30px;'>Your Account</b><br><br>
+<b>Username:</b> {{user.username}}<br>
+<b>Email:</b> {{user.email}}<br>
+<b>First:</b> {{user.first_name}}<br>
+<b>Last:</b> {{user.last_name}}<br>
+<b>Address:</b> {{user.address}}<br>
+</p> <br>
+<a class = "btn btn-light btn-lg" href ="{%static 'images/lol4.jpeg'%}" style ="margin-left: 5%;text-decoration: underline;" role = "button" id = "view_orders"><b>View Orders</b>
+</a>    <br>
+
+{%endblock%}

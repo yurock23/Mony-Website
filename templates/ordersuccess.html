@@ -1,0 +1,16 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block content %}
+
+<img src = "{% static 'images/check.png' %}"  id = 'check'>
+
+<p style = 'font-size: 34px; text-align: center;'>YOUR ORDER HAS BEEN PROCESSED!</p>
+<p class = order>Your order has been successfully processed!<br><br>
+    Please direct any questions you have to one of <a href = "{% url 'products:contact' %}" style ='font-style: italic; text-decoration: underline;'>our agents.</a><br><br>
+    Thanks for shopping with us online!
+</p><br><br>
+
+
+<a class = "btn btn-primary btn-lg" href = "{% url 'products:home' %}" role = "button" id ='continue'><b>Continue</b></a>
+{% endblock%}

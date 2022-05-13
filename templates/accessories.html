@@ -1,0 +1,29 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block content %}
+<h1 class="title">Accessories</h1>
+<p class ="category_description">&nbspComplete Your Look With These Key Pieces!</p>
+    <div class="container-product">
+        <div class = "row">
+            {% for product in object_list reversed %}
+            {% if product.item_category|stringformat:"s" == 'A'|stringformat:"s" %}
+                <div class="col-xl-3 col-lg-4 col-md-5 col-xs-0 post-entry">
+                    <a href="{{ product.get_absolute_url }}">
+                        <div class="card h-100">
+                            <img src="{{ product.item_image.url }}" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h3 class="card-title">{{ product.item_name }}</h3>
+                                <div class="card-footer">
+                                    <small class="text-muted">Price: <b style = 'font-size: medium;'>$</b></small> {{ product.item_price }}
+                                    <a href="{{ product.get_add_to_cart_url }}" class="btn btn-outline-secondary ms-auto"><i class="fas fa-cart-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock%}

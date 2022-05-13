@@ -1,0 +1,22 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block content %}
+
+<a href = "{% url 'products:women' %}"><img src="{% static 'images/women_collection.png' %}" class = "women_collection mx-auto d-block img-fluid mb-4">
+</a>
+    <div class="row rows" style = "margin-right: auto;margin-left: auto;">
+        <div class ="col column">
+            <a href = "{% url 'products:men' %}"><img src = "{%static 'images/men_collection.png' %}" class = "sub-images mx-auto d-block img-fluid">
+            </a></div>
+        <div class ="col column">
+            <a href = "{% url 'products:decorations' %}"><img src = "{%static 'images/decoration_collection.png' %}" class = "sub-images mx-auto d-block img-fluid">
+            </a></div>
+        <div class="col column">
+            <a href = "{% url 'products:accessories' %}"><img src = "{%static 'images/accessories_collection.png' %}" class = "sub-images mx-auto d-block img-fluid">
+            </a></div>
+    
+    </div>
+
+
+{% endblock%}

@@ -1,0 +1,183 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+a {
+    color: rgb(49, 49, 49);
+}
+
+a:hover {
+    color:rgb(49, 49, 49);
+    text-decoration: none;
+}
+
+.container {
+    margin: 0px 0px;
+    padding: 1em;
+    width: 100%;
+    min-width: 100%;
+}
+
+footer {
+    background-color: black;
+    color: cornsilk;
+    text-align: center;
+    width:100%;
+    margin-top: 5%;
+    padding: 0.35em;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+/*Base html*/
+
+#logo{
+    margin-left: 44px;
+}
+
+.category_description{
+    margin-left: auto;
+    margin-right: auto;
+    width:50%;
+    font-style:normal;
+    font-size: 20px;
+}
+
+/* home page */
+.women_collection{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;      
+}
+.sub-images{
+    width:100%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+}
+
+.column {
+    width:30%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .rows{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+
+
+/* Product pages */
+.post-entry {
+    margin: 1em 0;
+}
+
+.card-img-top {
+    width: 95%;
+    height: 20em;
+    margin: 0.5em;
+}
+
+.row{
+    margin-right:100px ;
+
+}
+.product_col{
+    margin: 1em;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-product{
+    position: relative;
+    left: 4em;
+}
+
+/* Product Detail View */
+.product-img {
+    width: 20em;
+}
+
+.review-sec {
+    margin: 1em;
+    border-top: 1px solid gray;
+}
+
+.review-disp {
+    margin: 0.5em 1em;
+}
+
+/* Cart page */
+.cart {
+    margin: 0px 1em;
+}
+
+.cart-row {
+    display: flex;
+    align-items: flex-stretch;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.row-image {
+    width: 45%;
+}
+
+
+#cart-logo {
+    width: 20%;
+    margin-left: 15px;
+}
+
+#checkout-btn {
+    text-align: right;
+    margin: 1em;
+}
+
+
+
+/*contact page*/
+#contact{
+    width:100%
+
+
+}
+
+#info{
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+/* order success page*/
+.order{ 
+    text-align: center;
+}
+
+#check{
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#continue{
+    width: 15%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;
+}
+
+
